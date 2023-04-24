@@ -1,0 +1,25 @@
+@use './variable' as *;
+@use './mixin' as *;
+
+header {
+  @include layout;
+  @include flex;
+  nav {
+    ul{
+      display: flex;
+      li{
+        margin-left: 30px;
+        padding-top: 40px;
+        &:hover{
+          a{
+            color: $yellow;
+            span{
+              border-top: 3px solid $yellow;
+              padding-top: 30px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

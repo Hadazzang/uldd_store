@@ -1,0 +1,24 @@
+header {
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+header nav > ul {
+  display: flex;
+}
+
+header nav > ul > li {
+  margin-left: 30px;
+  padding-top: 40px;
+}
+
+header nav ul > li:hover > a{
+  color: #ffd75e;
+}
+
+header nav ul > li:hover > a > span {
+  border-top: 3px solid #ffd75e;
+  padding-top: 30px;
+}

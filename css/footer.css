@@ -1,0 +1,31 @@
+/* footer */
+footer {
+  background-color: #161616;
+  position: relative;
+}
+
+footer div {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+footer small {
+  font-size: 15px;
+  color: #8f8f8f;
+  line-height: 50px;
+}
+
+footer small > a {
+  color: #8f8f8f;
+}
+
+footer button {
+  position: absolute;
+  font-size: 20px;
+  background-color: #ffd75e;
+  border: none;
+  width: 30px;
+  height: 30px;
+  right: 10px;
+  bottom: 10px;
+}

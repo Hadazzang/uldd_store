@@ -1,0 +1,17 @@
+@use './variable' as *;
+
+@mixin layout {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+@mixin flex($start: space-between) {
+  display: flex;
+  justify-content: $start;
+}
+
+@mixin underline {
+  display: block;
+  width: 600px;
+  border: 1px solid #000;
+}

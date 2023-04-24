@@ -1,0 +1,444 @@
+// box01
+@use './variable' as *;
+@use './mixin' as *;
+
+#box01 {
+  background-color: $black;
+  > div {
+    @include layout;
+    @include flex;
+    align-items: center;
+    padding: 100px 0 100px 50px;
+    > div {
+      width: 50%;
+      h2 {
+        color: $white;
+        span {
+          display: block;
+          margin-top: 30px;
+          margin-bottom: 30px;
+        }
+        .yellow {
+          color: $yellow;
+        }
+        &:nth-child(1) {
+          font-size: 36px;
+          font-weight: 400;
+        }
+        &:nth-child(3) {
+          font-size: 36px;
+        }
+      }
+      p {
+        line-height: 24px;
+        color: $white;
+      }
+      button {
+        margin-top: 50px;
+        border: none;
+        border-radius: 2px;
+        padding: 20px 30px;
+        cursor: pointer;
+      }
+      .get_started {
+        background-color: transparent;
+        color: $white;
+      }
+      .buy_now {
+        background-color: $yellow;
+      }
+    }
+  }
+}
+
+// box02
+#box02 {
+  border-top: 3px solid $yellow;
+  div {
+    @include layout;
+    h2 {
+      font-size: 20px;
+      font-weight: bold;
+      margin: 65px 0 12px 30px;
+    }
+    span {
+      @include underline;
+    }
+    .gallery {
+      @include flex;
+      flex-wrap: wrap;
+      figure {
+        width: 270px;
+        margin-bottom: 50px;
+        position: relative;
+        img {
+          margin-bottom: 25px;
+        }
+        figcaption {
+          dl {
+            font-size: 20px;
+            text-align: center;
+            dt {
+              margin-bottom: 14px;
+              font-weight: bold;
+            }
+            dd {
+              margin-bottom: 25px;
+              &:nth-child(3) {
+                ins {
+                  color: $yellow;
+                  margin: 0 10px;
+                }
+              }
+              &:nth-child(4) {
+                button {
+                  background-color: transparent;
+                  width: 150px;
+                  height: 36px;
+                  border-radius: 16px;
+                  cursor: pointer;
+                }
+              }
+              &:nth-child(5) {
+                position: absolute;
+                right: 0px;
+                bottom: 200px;
+                button {
+                  font-size: 50px;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  background-color: transparent;
+                  color: #ffd75e;
+                  border: none;
+                  cursor: pointer;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// #box03
+#box03 {
+  background-color: $black;
+  div {
+    @include layout;
+    padding: 100px 0;
+    h2 {
+      font-size: 30px;
+      color: $white;
+    }
+    span {
+      display: block;
+      color: $white;
+      font-size: 20px;
+      margin-top: 20px;
+    }
+    p {
+      color: $gray;
+      line-height: 20px;
+      margin-top: 20px;
+    }
+    button {
+      background-color: $yellow;
+      margin-top: 30px;
+      border: none;
+      border-radius: 2px;
+      padding: 12px 40px;
+      cursor: pointer;
+    }
+  }
+}
+
+// box04
+#box04 {
+  border-top: 3px solid $yellow;
+  div {
+    @include layout;
+    position: relative;
+    overflow: hidden;
+    h2 {
+      font-size: 20px;
+      font-weight: bold;
+      margin: 65px 0 12px 30px;
+    }
+    span {
+      display: block;
+      width: 600px;
+      border: 1px solid #000;
+    }
+    ul {
+      @include flex;
+      width: 420px;
+      margin: 20px 0 20px;
+      li {
+        width: 100px;
+        height: 35px;
+        @include flex($start: center);
+        align-items: center;
+        cursor: pointer;
+        &:nth-child(1) {
+          background-color: $yellow;
+        }
+      }
+    }
+  }
+  .gallery {
+    width: 2370px;
+    @include flex;
+    flex-wrap: nowrap;
+    figure {
+      width: 270px;
+      margin-bottom: 50px;
+      position: relative;
+      img {
+        margin-bottom: 25px;
+      }
+      figcaption {
+        dl {
+          font-size: 20px;
+          text-align: center;
+          dt {
+            margin-bottom: 14px;
+            font-weight: bold;
+          }
+          dd {
+            margin-bottom: 25px;
+            &:nth-child(3) {
+              ins {
+                color: $yellow;
+                margin: 0 10px;
+              }
+            }
+            &:nth-child(4) {
+              button {
+                background-color: transparent;
+                width: 150px;
+                height: 36px;
+                border-radius: 16px;
+                cursor: pointer;
+              }
+            }
+            &:nth-child(5) {
+              position: absolute;
+              right: 0px;
+              bottom: 200px;
+              button {
+                font-size: 50px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: transparent;
+                color: #ffd75e;
+                border: none;
+                cursor: pointer;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// box05
+#box05 {
+  background-color: $black;
+  #container {
+    @include layout;
+    display: flex;
+    #left {
+      img {
+        width: 250px;
+        padding: 50px 0 50px;
+        flex: 1;
+      }
+    }
+    #center {
+      flex: 2;
+      p {
+        color: $white;
+        font-size: 20px;
+        padding: 100px 20px 20px;
+      }
+      dl {
+        color: $white;
+        padding: 20px 20px 0px;
+        dt {
+          font-size: 40px;
+          a {
+            color: $yellow;
+          }
+        }
+        dd {
+          button {
+            margin-top: 20px;
+            padding: 12px 40px;
+            border-radius: 2px;
+            border: none;
+            background-color: #ffd75e;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+    #right {
+      flex: 1;
+      position: relative;
+      img {
+        width: 300px;
+        margin-top: 50px;
+        margin-bottom: 10px;
+      }
+      dl {
+        position: absolute;
+        bottom: 120px;
+        left: 100px;
+        dt {
+          background-color: $white;
+          font-size: 25px;
+          font-weight: bold;
+          line-height: 30px;
+        }
+        dd {
+          display: inline;
+          background-color: $yellow;
+        }
+      }
+    }
+  }
+}
+
+// box06
+#box06 {
+  border-top: 3px solid $yellow;
+  div {
+    @include layout;
+    position: relative;
+    h2 {
+      font-size: 20px;
+      font-weight: bold;
+      margin: 65px 0 12px 30px;
+    }
+    span {
+      display: block;
+      width: 600px;
+      border: 1px solid #000;
+      margin-bottom: 20px;
+    }
+    ul {
+      @include flex;
+      width: 420px;
+      margin: 20px 0 20px;
+      li {
+        @include flex($start: center);
+        width: 100px;
+        height: 35px;
+        align-items: center;
+        cursor: pointer;
+        &:nth-child(1) {
+          background-color: $yellow;
+        }
+      }
+    }
+  }
+  .gallery {
+    @include flex;
+    flex-wrap: wrap;
+    width: 1200px;
+    figure {
+      width: 270px;
+      margin-bottom: 50px;
+      position: relative;
+      img {
+        margin-bottom: 25px;
+      }
+      figcaption {
+        dl {
+          font-size: 20px;
+          text-align: center;
+          dt {
+            margin-bottom: 14px;
+            font-weight: bold;
+          }
+          dd {
+            margin-bottom: 25px;
+            &:nth-child(3) {
+              ins {
+                color: $yellow;
+                margin: 0 10px;
+              }
+            }
+            &:nth-child(4) {
+              button {
+                background-color: transparent;
+                width: 150px;
+                height: 36px;
+                border-radius: 16px;
+                cursor: pointer;
+              }
+            }
+            &:nth-child(5) {
+              position: absolute;
+              right: 0px;
+              bottom: 200px;
+              button {
+                font-size: 50px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: transparent;
+                color: #ffd75e;
+                border: none;
+                cursor: pointer;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// box07
+#box07 {
+  background-color: $yellow;
+  > div {
+    @include layout;
+    h2 {
+      padding-top: 50px;
+      font-size: 30px;
+      a {
+        font-weight: bold;
+      }
+    }
+    div {
+      display: flex;
+      flex-wrap: wrap;
+      .pic {
+        width: 150px;
+        height: 150px;
+        border: 10px solid $white;
+        border-radius: 50%;
+        background-color: $black;
+        margin: 20px 20px;
+      }
+      div {
+        flex-direction: column;
+        p {
+          width: 900px;
+          line-height: 25px;
+          margin: 20px;
+        }
+        span {
+          display: block;
+          margin: 20px;
+        }
+      }
+    }
+  }
+}
