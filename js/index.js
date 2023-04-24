@@ -25,3 +25,12 @@ $(document).ready(function() {
   });
 });  
 
+$(document).ready(function(){
+  $("#box07").click(function(){
+    $("#modal").fadeIn();
+  });
+  
+  $(".close").click(function(){
+    $("#modal").fadeOut();
+  });
+});
