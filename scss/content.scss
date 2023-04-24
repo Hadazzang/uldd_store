@@ -71,8 +71,12 @@
         width: 270px;
         margin-bottom: 50px;
         position: relative;
+        overflow: hidden;
         img {
           margin-bottom: 25px;
+          &:hover{
+            transform: scale(1.1);
+          }
         }
         figcaption {
           dl {
@@ -195,8 +199,12 @@
       width: 270px;
       margin-bottom: 50px;
       position: relative;
+      overflow: hidden;
       img {
         margin-bottom: 25px;
+        &:hover{
+          transform: scale(1.1);
+        }
       }
       figcaption {
         dl {
@@ -354,8 +362,12 @@
       width: 270px;
       margin-bottom: 50px;
       position: relative;
+      overflow: hidden;
       img {
         margin-bottom: 25px;
+        &:hover{
+          transform: scale(1.1);
+        }
       }
       figcaption {
         dl {
